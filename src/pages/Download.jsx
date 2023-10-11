@@ -3,8 +3,17 @@ import background from "../assets/demo-bg.webp";
 import AppStoreLight from "../components/AppStore/AppStoreLight";
 import GooglePlayLight from "../components/GooglePlay/GooglePlayLight";
 function Download() {
+  const handleNavigation = (e, sectionId) => {
+    e.preventDefault();
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+    // toggleMenu(); // Close the menu when a menu item is clicked
+  };
   return (
     <div
+      id="download"
       className="bg-cover bg-center h-screen text-white flex flex-col justify-center items-center"
       style={{ backgroundImage: `url(${background})` }}
     >
@@ -24,13 +33,18 @@ function Download() {
           <AppStoreLight />
         </button>
         <button>
-          <GooglePlayLight/>
+          <GooglePlayLight />
         </button>
       </div>
-      <div className="text-center mt-24">
-        <span className="text-white text-lg ">
-          Vishv Shah - 2023
-        </span>
+     
+      <div
+        className="relative  bg-[#EF106E] py-2 px-3  mt-10 rounded-lg cursor-pointer z-50 transition-opacity opacity-80 hover:opacity-100 flex items-center justify-center"
+        onClick={(e) => handleNavigation(e, "homepage")}
+      >
+        Back to top
+      </div>
+      <div className="text-center mt-10">
+        <span className="text-white text-lg ">Vishv Shah - 2023</span>
       </div>
     </div>
   );

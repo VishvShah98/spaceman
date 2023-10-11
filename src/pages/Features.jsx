@@ -20,13 +20,13 @@ function Features() {
         icon: <FaEnvelope size="24" color="white"/>, // Telegram icon
         title: "Vivamus ultrices",
         description:
-          "Get this mobile app website template and many others with Slider Revolution.",
+          "Get this mobile app website template and many others from our collection.",
       },
   ];
   return (
-    <div className="bg-[#ECF1FF] pt-36 pb-36">
+    <div  className="bg-[#ECF1FF] pt-36 pb-36">
       <div className="text-center uppercase mb-4">
-        <span className="text-[#EF106E] text-md md:text-lg font-bold">
+        <span id="features" className="text-[#EF106E] text-md md:text-lg font-bold">
           App Features
         </span>
       </div>

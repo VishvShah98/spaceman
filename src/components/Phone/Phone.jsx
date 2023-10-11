@@ -19,6 +19,15 @@ function Phone(props) {
     backgroundImage.endsWith(ext)
   );
 
+  const handleNavigation = (e, sectionId) => {
+    e.preventDefault();
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+ // Close the menu when a menu item is clicked
+  };
+
   return (
     <div
       className="bg-black rounded-[70px] p-4 shadow-[0px_0px_30px_15px_rgba(0,0,0,0.3)] border-[18px] border-[#ECF1FF] text-white relative "
@@ -47,7 +56,28 @@ function Phone(props) {
             <div className="text-3xl font-black">
               <span>Spaceman</span>
             </div>
-            <div><button className="bg-custom-gradient uppercase mt-12 text-xs px-16 py-4 rounded-3xl">Get Started</button></div>
+            <div>
+              <button
+              id="getStartedButton"
+              onClick={(e) => handleNavigation(e, 'about')}
+                style={{
+                  background:
+                    "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)",
+                  transition: "background 0.5s ease-in-out",
+                }}
+                onMouseEnter={() =>
+                  (document.getElementById("getStartedButton").style.background =
+                    "#FF1493")
+                }
+                onMouseLeave={() =>
+                  (document.getElementById("getStartedButton").style.background =
+                    "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)")
+                }
+                className=" uppercase mt-12 text-xs px-16 py-4 rounded-3xl"
+              >
+                Get Started
+              </button>
+            </div>
           </div>
         </div>
       ) : (

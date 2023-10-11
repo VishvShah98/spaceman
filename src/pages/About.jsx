@@ -15,7 +15,7 @@ function About() {
     {
       challengeNumber: "01",
       challengeMainPara:
-        "Creating an appealing app landing page can be a challenge. This app website template for Slider Revolution makes the process a breeze",
+        "Creating an appealing app landing page can be a challenge. This stunning app website template  makes the process a breeze",
       challengeSubPara:
         "Showcase your work in a professional way with a mobile app website template that is visually stunning and easy to customize.",
       boxColor: boxColor1, // Example color
@@ -24,7 +24,7 @@ function About() {
     {
       challengeNumber: "02",
       challengeMainPara:
-        "Creating an appealing app landing page can be a challenge. This app website template for Slider Revolution makes the process a breeze",
+        "Creating an appealing app landing page can be a challenge. This stunning app website template  makes the process a breeze",
       challengeSubPara:
         "Showcase your work in a professional way with a mobile app website template that is visually stunning and easy to customize.",
       boxColor: boxColor2, // Example color
@@ -33,7 +33,7 @@ function About() {
     {
       challengeNumber: "03",
       challengeMainPara:
-        "Creating an appealing app landing page can be a challenge. This app website template for Slider Revolution makes the process a breeze",
+        "Creating an appealing app landing page can be a challenge. This stunning app website template  makes the process a breeze",
       challengeSubPara:
         "Showcase your work in a professional way with a mobile app website template that is visually stunning and easy to customize.",
       boxColor: boxColor1, // Example color
@@ -43,7 +43,7 @@ function About() {
   ];
 
   return (
-    <div className="bg-[#ECF1FF] leading-tight">
+    <div id="about" className="bg-[#ECF1FF] leading-tight">
       <div className="text-center uppercase mb-4">
         <span className="text-[#EF106E] text-md md:text-lg font-bold">
           About the App

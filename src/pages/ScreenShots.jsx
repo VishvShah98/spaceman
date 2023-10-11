@@ -13,9 +13,9 @@ function ScreenShots() {
   const imagesSecondSet = [img6, img5, img4];
 
   return (
-    <div className="bg-[#ECF1FF] leading-tight pt-36">
+    <div  className="bg-[#ECF1FF] leading-tight pt-36">
       <div className="text-center uppercase mb-4">
-        <span className="text-[#EF106E] text-md md:text-lg font-bold">
+        <span id="screenshots" className="text-[#EF106E] text-md md:text-lg font-bold">
           App Preview
         </span>
       </div>
