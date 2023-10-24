@@ -11,6 +11,19 @@ function Download() {
     }
     // toggleMenu(); // Close the menu when a menu item is clicked
   };
+
+
+  const images = [background];
+
+  React.useEffect(() => {
+    // Preload images
+    images.forEach((imgSrc, index) => {
+      const img = new Image();
+      img.src = imgSrc;
+    });
+  }, []);
+
+
   return (
     <div
       id="download"

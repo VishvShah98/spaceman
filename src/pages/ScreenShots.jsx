@@ -12,10 +12,29 @@ function ScreenShots() {
   const imagesFirstSet = [img2, img1, img3];
   const imagesSecondSet = [img6, img5, img4];
 
+  React.useEffect(() => {
+    // Preload images
+    imagesFirstSet.forEach((imgSrc, index) => {
+      const img = new Image();
+      img.src = imgSrc;
+    });
+  }, []);
+
+  React.useEffect(() => {
+    // Preload images
+    imagesSecondSet.forEach((imgSrc, index) => {
+      const img = new Image();
+      img.src = imgSrc;
+    });
+  }, []);
+
   return (
-    <div  className="bg-[#ECF1FF] leading-tight pt-36">
+    <div className="bg-[#ECF1FF] leading-tight pt-36">
       <div className="text-center uppercase mb-4">
-        <span id="screenshots" className="text-[#EF106E] text-md md:text-lg font-bold">
+        <span
+          id="screenshots"
+          className="text-[#EF106E] text-md md:text-lg font-bold"
+        >
           App Preview
         </span>
       </div>

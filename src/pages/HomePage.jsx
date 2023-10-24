@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import background from "../assets/hero-bg.jpg";
 import bg from "../assets/app-screen2.webp";
 import bg2 from "../assets/app-screen3.jpg";
@@ -9,6 +10,17 @@ import GooglePlay from "../components/GooglePlay/GooglePlay";
 import { motion } from "framer-motion";
 
 function HomePage() {
+
+  const images = [bg, bg2];
+
+  useEffect(() => {
+    // Preload images
+    images.forEach((imgSrc, index) => {
+      const img = new Image();
+      img.src = imgSrc;
+    });
+  }, []);
+
   const handleNavigation = (e, sectionId) => {
     e.preventDefault();
     const sectionElement = document.getElementById(sectionId);
