@@ -13,7 +13,7 @@ function HomePage() {
     e.preventDefault();
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth"});
+      sectionElement.scrollIntoView({ behavior: "smooth" });
     }
     // toggleMenu(); // Close the menu when a menu item is clicked
   };
@@ -24,16 +24,23 @@ function HomePage() {
         style={{ backgroundImage: `url(${background})` }}
       >
         <button
-        id="downloadButton"
-        onClick={(e) => handleNavigation(e, 'download')}
-        style={{
-          background:
-            "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)",
-            transition: 'background 0.5s ease-in-out',
-        }}
-        onMouseEnter={() => document.getElementById("downloadButton").style.background="#FF1493"}
-        onMouseLeave={() => document.getElementById("downloadButton").style.background="linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)"}
-        className="uppercase relative top-0 left-0 py-4 px-4 mx-10 my-7 text-base text-white font-medium rounded hover:bg-pink-600">
+          id="downloadButton"
+          onClick={(e) => handleNavigation(e, "download")}
+          style={{
+            background:
+              "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)",
+            transition: "background 0.5s ease-in-out",
+          }}
+          onMouseEnter={() =>
+            (document.getElementById("downloadButton").style.background =
+              "#FF1493")
+          }
+          onMouseLeave={() =>
+            (document.getElementById("downloadButton").style.background =
+              "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)")
+          }
+          className="uppercase relative top-0 left-0 py-4 px-4 mx-10 my-7 text-base text-white font-medium rounded hover:bg-pink-600"
+        >
           Download
         </button>
         <div className="hidden  md:block absolute top-0 right-0 py-4 px-4 mx-32 my-7  ">
@@ -52,7 +59,7 @@ function HomePage() {
           </div>
           <div className="text-center">
             <span className="text-4xl md:text-7xl font-black tracking-tighter ">
-              App Website <br/> Template
+              App Website <br /> Template
             </span>
           </div>
         </motion.div>

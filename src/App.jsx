@@ -6,9 +6,16 @@ import Demo from "./pages/Demo";
 import ScreenShots from "./pages/ScreenShots";
 import Team from "./pages/Team";
 import Download from "./pages/Download";
+import { useSnapshot } from "valtio";
+import videoState from "./state";
+
+
 function App() {
+
+  const snapshot = useSnapshot(videoState);
+
   return (
-    <>
+    <div style={{ display: snapshot.isVideoLoaded ? "block" : "none" }}>
       <Navbar />
       <HomePage />
       <About />
@@ -17,7 +24,7 @@ function App() {
       <ScreenShots />
       <Team />
       <Download />
-    </>
+    </div>
   );
 }
 

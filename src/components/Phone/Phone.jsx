@@ -1,3 +1,5 @@
+import videoState from "../../state";
+
 function Phone(props) {
   const { type, backgroundImage } = props;
 
@@ -25,7 +27,7 @@ function Phone(props) {
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: "smooth" });
     }
- // Close the menu when a menu item is clicked
+    // Close the menu when a menu item is clicked
   };
 
   return (
@@ -48,6 +50,9 @@ function Phone(props) {
             loop
             muted
             className="object-cover object-center rounded-[52px] absolute inset-0 w-full h-full "
+            onLoadedData={() => {
+              videoState.isVideoLoaded = true;
+            }}
           ></video>
           <div className="text-center absolute bottom-10 left-0 right-0 text-white uppercase">
             <div className="text-xl font-thin pt-4">
@@ -58,19 +63,22 @@ function Phone(props) {
             </div>
             <div>
               <button
-              id="getStartedButton"
-              onClick={(e) => handleNavigation(e, 'about')}
+                id="getStartedButton"
+                onClick={(e) => handleNavigation(e, "about")}
                 style={{
                   background:
                     "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)",
                   transition: "background 0.5s ease-in-out",
                 }}
                 onMouseEnter={() =>
-                  (document.getElementById("getStartedButton").style.background =
-                    "#FF1493")
+                  (document.getElementById(
+                    "getStartedButton"
+                  ).style.background = "#FF1493")
                 }
                 onMouseLeave={() =>
-                  (document.getElementById("getStartedButton").style.background =
+                  (document.getElementById(
+                    "getStartedButton"
+                  ).style.background =
                     "linear-gradient(130deg, rgb(182, 53, 156) 0%, rgb(239, 10, 106) 100%)")
                 }
                 className=" uppercase mt-12 text-xs px-16 py-4 rounded-3xl"
